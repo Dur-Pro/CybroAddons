@@ -145,6 +145,7 @@ class MailActivity(models.Model):
 
 class ActivityGeneral(models.Model):
     _name = 'activity.general'
+    _description = 'General Activities'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 
     name = fields.Char('Name')
