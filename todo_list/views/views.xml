@@ -139,7 +139,7 @@
                                 <field name="priority" widget="priority"
                                        class="mr-3"/>
                                 <field name="activity_type_id"/>
-                                <field name="user_id" invisible="1"/>
+                                <field name="user_id"/>
                                 <field name="summary"
                                        placeholder="e.g. Discuss proposal"/>
                                 <field name="res_id" invisible="1"/>

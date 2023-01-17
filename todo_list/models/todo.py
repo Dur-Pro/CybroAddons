@@ -31,18 +31,18 @@ class MailActivity(models.Model):
     _inherit = ['mail.activity', 'mail.thread']
     _rec_name = 'summary'
 
-    date_deadline = fields.Date('Due Date', index=True, required=True,
-                                default=fields.Date.context_today, store=True)
-    user_id = fields.Many2one('res.users', string='user', index=True,
+    date_deadline = fields.Date('Due Date', index=True, required=True, default=fields.Date.context_today, store=True)
+    user_id = fields.Many2one('res.users', string='Assigned to', index=True,
                               tracking=True, default=lambda self: self.env.user)
     res_model_id = fields.Many2one(
         'ir.model', 'Document Model',
-        index=True, ondelete='cascade', required=True,
-        default=lambda self: self.env.ref('todo_list.model_activity_general'))
+        index=True, ondelete='cascade', required=True)
+#        default=lambda self: self.env.ref('todo_list.model_activity_general'))
+
     res_id = fields.Many2oneReference(string='Related Document ID', index=True,
-                                      required=True, model_field='res_model',
-                                      default=lambda self: self.env.ref(
-                                          'todo_list.general_activities'))
+                                      required=True, model_field='res_model')
+#                                      default=lambda self: self.env.ref(
+#                                          'todo_list.general_activities'))
     priority = fields.Selection([
         ('0', 'Normal'),
         ('1', 'Important'),
