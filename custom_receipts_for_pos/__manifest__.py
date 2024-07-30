@@ -21,7 +21,7 @@
 #############################################################################
 {
     'name': 'Custom Receipts for POS',
-    'version': '15.0.1.0.0',
+    'version': '15.0.1.0.1',
     'summary': "Add Custom Receipt for each POS",
     'description': "It helps to create and select customised receipts for "
                    "each POS",
@@ -37,9 +37,10 @@
         'views/pos_receipt_views.xml',
         'views/pos_config_views.xml'
     ],
+    'demo': ['demo/pos_receipt_views_demo.xml'],
     'assets': {
         'point_of_sale.assets': [
-         'custom_receipts_for_pos/static/src/js/ReceiptScreen/order_receipt.js',
+            'custom_receipts_for_pos/static/src/js/ReceiptScreen/order_receipt.js',
         ],
     },
     'images': ['static/description/banner.jpg'],

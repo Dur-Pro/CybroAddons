@@ -3,8 +3,8 @@
 #
 #    Cybrosys Technologies Pvt. Ltd.
 #
-#    Copyright (C) 2023-TODAY Cybrosys Technologies(<https://www.cybrosys.com>).
-#    Author: Javid A(<https://www.cybrosys.com>)
+#    Copyright (C) 2023-TODAY Cybrosys Technologies(<https://www.cybrosys.com>)
+#    Author: Javid A (<https://www.cybrosys.com>)
 #
 #    You can modify it under the terms of the GNU AFFERO
 #    GENERAL PUBLIC LICENSE (AGPL v3), Version 3.
@@ -22,20 +22,20 @@
 {
     'name': 'Manufacturing Reports',
     'version': '15.0.1.0.0',
-    'summary': 'PDF & XLS Reports For Manufacturing Module',
-    'description': 'PDF & XLS reports for manufacturing module with advanced filters.',
     'category': 'Manufacturing',
+    'summary': 'PDF & XLS Reports For Manufacturing Module',
+    'description': 'Advanced filters for PDF and XLS reports for '
+                   'manufacturing module',
     'author': 'Cybrosys Techno Solutions',
-    'website': "http://www.cybrosys.com",
     'company': 'Cybrosys Techno Solutions',
     'maintainer': 'Cybrosys Techno Solutions',
+    'website': "http://www.cybrosys.com",
     'depends': ['base', 'mrp'],
     'data': [
         'security/ir.model.access.csv',
-        'wizards/mrp_wizard_view.xml',
-        'reports/mrp_report_template.xml',
-        'reports/mrp_report.xml',
-        'views/menu_items.xml',
+        'wizard/manufacturing_report_views.xml',
+        'report/mrp_report_templates.xml',
+        'report/mrp_report_reports.xml',
     ],
     'assets': {
         'web.assets_backend': [
